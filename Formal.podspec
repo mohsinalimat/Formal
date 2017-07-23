@@ -9,8 +9,10 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Formal/*.*'
+  s.source_files = 'Formal/**/*.swift', 'Formal/**/*.h'
   s.module_name = 'Formal'
-  s.public_header_files = 'Formal/*.h'
-  s.frameworks = 'Foundation', 'UIKit'
+  s.public_header_files = 'Formal/Formal.h'
+  s.frameworks = 'Foundation', 'UIKit', 'MapKit', 'CoreLocation'
+  s.resources = 'Formal/Resources/Formal.bundle', 'Formal/Resources/*.xib'
+  s.requires_arc = true
 end
