@@ -20,7 +20,7 @@
 
 `Formal` is a `UITableView` form builder.
 
-![Formal](https://i.loli.net/2017/07/23/59746e21f3c86.png)
+![Formal](https://i.loli.net/2017/07/23/5974704c2e30f.png)
 
 ## Requirements
 
