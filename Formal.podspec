@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Formal"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "A UITableView form builder."
   s.homepage         = "https://github.com/Meniny/Formal"
   s.license          = 'MIT'
@@ -15,4 +15,5 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation', 'UIKit', 'MapKit', 'CoreLocation'
   s.resources = 'Formal/Resources/Formal.bundle', 'Formal/Resources/*.xib'
   s.requires_arc = true
+  s.dependency "SDWebImage"
 end

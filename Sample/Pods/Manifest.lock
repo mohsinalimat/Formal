@@ -1,5 +1,9 @@
 PODS:
-  - Formal (1.0.0)
+  - Formal (1.0.0):
+    - SDWebImage
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - Formal (from `../`)
@@ -9,7 +13,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Formal: 613489367fd7d445388eaf820374db88bda34368
+  Formal: f56b90fac76fc75f49baa48cb044fb3224ba66da
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
 PODFILE CHECKSUM: d16d8e84c243f66c9266e6d060c12bd2a2b602f8
 

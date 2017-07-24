@@ -26,17 +26,17 @@ import Foundation
 
 open class FormalBaseRow: BaseRowType {
 
-    var callbackOnChange: (() -> Void)?
-    var callbackCellUpdate: (() -> Void)?
-    var callbackCellSetup: Any?
-    var callbackCellOnSelection: (() -> Void)?
-    var callbackOnExpandInlineRow: Any?
-    var callbackOnCollapseInlineRow: Any?
-    var callbackOnCellHighlightChanged: (() -> Void)?
-    var callbackOnRowValidationChanged: (() -> Void)?
-    var _inlineRow: FormalBaseRow?
+    open var callbackOnChange: (() -> Void)?
+    open var callbackCellUpdate: (() -> Void)?
+    open var callbackCellSetup: Any?
+    open var callbackCellOnSelection: (() -> Void)?
+    open var callbackOnExpandInlineRow: Any?
+    open var callbackOnCollapseInlineRow: Any?
+    open var callbackOnCellHighlightChanged: (() -> Void)?
+    open var callbackOnRowValidationChanged: (() -> Void)?
+    open var _inlineRow: FormalBaseRow?
     
-    var _cachedOptionsData: Any?
+    open var _cachedOptionsData: Any?
 
     public var validationOptions: ValidationOptions = .validatesOnBlur
     // validation state

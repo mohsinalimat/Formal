@@ -27,17 +27,17 @@ import UIKit
 
 // MARK: FormalRow
 
-internal class FormalRowDefaults {
-    static var cellUpdate = [String: (FormalBaseCell, FormalBaseRow) -> Void]()
-    static var cellSetup = [String: (FormalBaseCell, FormalBaseRow) -> Void]()
-    static var onCellHighlightChanged = [String: (FormalBaseCell, FormalBaseRow) -> Void]()
-    static var rowInitialization = [String: (FormalBaseRow) -> Void]()
-    static var onRowValidationChanged = [String: (FormalBaseCell, FormalBaseRow) -> Void]()
-    static var rawCellUpdate = [String: Any]()
-    static var rawCellSetup = [String: Any]()
-    static var rawOnCellHighlightChanged = [String: Any]()
-    static var rawRowInitialization = [String: Any]()
-    static var rawOnRowValidationChanged = [String: Any]()
+public class FormalRowDefaults {
+    public static var cellUpdate = [String: (FormalBaseCell, FormalBaseRow) -> Void]()
+    public static var cellSetup = [String: (FormalBaseCell, FormalBaseRow) -> Void]()
+    public static var onCellHighlightChanged = [String: (FormalBaseCell, FormalBaseRow) -> Void]()
+    public static var rowInitialization = [String: (FormalBaseRow) -> Void]()
+    public static var onRowValidationChanged = [String: (FormalBaseCell, FormalBaseRow) -> Void]()
+    public static var rawCellUpdate = [String: Any]()
+    public static var rawCellSetup = [String: Any]()
+    public static var rawOnCellHighlightChanged = [String: Any]()
+    public static var rawRowInitialization = [String: Any]()
+    public static var rawOnRowValidationChanged = [String: Any]()
 }
 
 // MARK: FormCells

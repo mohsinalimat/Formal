@@ -30,5 +30,10 @@
     "Formal/Resources/Formal.bundle",
     "Formal/Resources/*.xib"
   ],
-  "requires_arc": true
+  "requires_arc": true,
+  "dependencies": {
+    "SDWebImage": [
+
+    ]
+  }
 }

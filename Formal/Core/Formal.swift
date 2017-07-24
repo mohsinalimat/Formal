@@ -331,25 +331,25 @@ extension Formal {
         }
     }
 
-    func nextRow(for row: FormalBaseRow) -> FormalBaseRow? {
+    public func nextRow(for row: FormalBaseRow) -> FormalBaseRow? {
         let allRows = rows
         guard let index = allRows.index(of: row) else { return nil }
         guard index < allRows.count - 1 else { return nil }
         return allRows[index + 1]
     }
 
-    func previousRow(for row: FormalBaseRow) -> FormalBaseRow? {
+    public func previousRow(for row: FormalBaseRow) -> FormalBaseRow? {
         let allRows = rows
         guard let index = allRows.index(of: row) else { return nil }
         guard index > 0 else { return nil }
         return allRows[index - 1]
     }
 
-    func hideSection(_ section: FormalSection) {
+    public func hideSection(_ section: FormalSection) {
         kvoWrapper.sections.remove(section)
     }
 
-    func showSection(_ section: FormalSection) {
+    public func showSection(_ section: FormalSection) {
         guard !kvoWrapper.sections.contains(section) else { return }
         guard var index = kvoWrapper._allSections.index(of: section) else { return }
         var formIndex = NSNotFound
