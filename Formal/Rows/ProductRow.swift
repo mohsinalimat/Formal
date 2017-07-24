@@ -77,7 +77,7 @@ public final class FormalProductRow: FormalRow<FormalProductCell>, FormalRowType
     required public init(tag: String?) {
         super.init(tag: tag)
         // We set the cellProvider to load the .xib corresponding to our cell
-        cellProvider = FormalCellProvider<FormalProductCell>(nibName: "FormalProductCell", bundle: Bundle.main)
+        cellProvider = FormalCellProvider<FormalProductCell>(nibName: "FormalProductCell", bundle: nil)
     }
 }
 

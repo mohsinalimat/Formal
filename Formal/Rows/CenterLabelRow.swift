@@ -60,7 +60,7 @@ public final class FormalCenterLabelRow: FormalRow<FormalCenterLabelCell>, Forma
     required public init(tag: String?) {
         super.init(tag: tag)
         // We set the cellProvider to load the .xib corresponding to our cell
-        cellProvider = FormalCellProvider<FormalCenterLabelCell>(nibName: "FormalCenterLabelCell", bundle: Bundle.main)
+        cellProvider = FormalCellProvider<FormalCenterLabelCell>(nibName: "FormalCenterLabelCell", bundle: nil)
     }
 }
 
