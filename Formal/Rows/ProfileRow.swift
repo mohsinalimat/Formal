@@ -59,7 +59,8 @@ open class FormalProfileCell: FormalCell<FormalProfile>, FormalCellType {
         selectionStyle = .none
         if let v = row.value {
             if let url = URL(string: v.avatar) {
-                avatarView.sd_setImage(with: url, placeholderImage: nil)
+//                avatarView.sd_setImage(with: url, placeholderImage: nil)
+                avatarView.imagery.setImage(with: url, placeholder: nil)
             } else {
                 avatarView.image = UIImage(named: v.avatar)
             }

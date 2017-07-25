@@ -25,7 +25,8 @@
 
 import Foundation
 import UIKit
-import SDWebImage
+//import SDWebImage
+import Imagery
 
 public struct FormalProduct: Equatable {
     
@@ -60,7 +61,8 @@ open class FormalProductCell: FormalCell<FormalProduct>, FormalCellType {
         selectionStyle = .none
         if let st = row.value {
             if let url = URL(string: st.image) {
-                iconView.sd_setImage(with: url, placeholderImage: nil)
+//                iconView.sd_setImage(with: url, placeholderImage: nil)
+                iconView.imagery.setImage(with: url, placeholder: nil)
             } else {
                 iconView.image = UIImage(named: st.image)
             }

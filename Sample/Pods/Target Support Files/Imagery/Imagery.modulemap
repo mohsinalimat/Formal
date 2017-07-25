@@ -1,0 +1,6 @@
+framework module Imagery {
+  umbrella header "Imagery-umbrella.h"
+
+  export *
+  module * { export * }
+}
