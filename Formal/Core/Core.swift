@@ -425,6 +425,28 @@ open class FormalViewControllerTableAnimationDefaults {
      */
     open var sectionReloadAnimation: UITableViewRowAnimation = .automatic
     
+    open func setAll(to animation: UITableViewRowAnimation) {
+        setRow(to: animation)
+        setSection(to: animation)
+    }
+    
+    open func setAll(row: UITableViewRowAnimation, section: UITableViewRowAnimation) {
+        setRow(to: row)
+        setSection(to: section)
+    }
+    
+    open func setRow(to row: UITableViewRowAnimation) {
+        rowInsertAnimation = row
+        rowDeleteAnimation = row
+        rowReloadAnimation = row
+    }
+    
+    open func setSection(to section: UITableViewRowAnimation) {
+        sectionInsertAnimation = section
+        sectionDeleteAnimation = section
+        sectionReloadAnimation = section
+    }
+    
     public init() {}
     
     public init(row: UITableViewRowAnimation, section: UITableViewRowAnimation) {
