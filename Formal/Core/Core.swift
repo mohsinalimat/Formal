@@ -394,6 +394,38 @@ public struct InlineRowHideOptions: OptionSet {
     public static let FirstResponderChanges = InlineRowHideOptions(.firstResponderChanges)
 }
 
+open class FormalViewControllerTableAnimationDefaults {
+    /**
+     Returns the animation for the insertion of the given rows.
+     */
+    open var rowInsertAnimation: UITableViewRowAnimation = .fade
+    
+    /**
+     Returns the animation for the deletion of the given rows.
+     */
+    open var rowDeleteAnimation: UITableViewRowAnimation = .fade
+    
+    /**
+     Returns the animation for the reloading of the given rows.
+     */
+    open var rowReloadAnimation: UITableViewRowAnimation = .automatic
+    
+    /**
+     Returns the animation for the insertion of the given sections.
+     */
+    open var sectionInsertAnimation: UITableViewRowAnimation = .automatic
+    
+    /**
+     Returns the animation for the deletion of the given sections.
+     */
+    open var sectionDeleteAnimation: UITableViewRowAnimation = .automatic
+    
+    /**
+     Returns the animation for the reloading of the given sections.
+     */
+    open var sectionReloadAnimation: UITableViewRowAnimation = .automatic
+}
+
 /// View controller that shows a formal.
 open class FormalViewController: UIViewController, FormalViewControllerProtocol, FormalDelegate {
 
@@ -418,6 +450,11 @@ open class FormalViewController: UIViewController, FormalViewControllerProtocol,
             }
         }
     }
+    
+    /**
+     Returns the animation for the reloading of the given sections.
+     */
+    open var animationSettings = FormalViewControllerTableAnimationDefaults()
 
     /// Extra space to leave between between the row in focus and the keyboard
     open var rowKeyboardSpacing: CGFloat = 0
@@ -577,42 +614,42 @@ open class FormalViewController: UIViewController, FormalViewControllerProtocol,
      Returns the animation for the insertion of the given rows.
      */
     open func insertAnimation(forRows rows: [FormalBaseRow]) -> UITableViewRowAnimation {
-        return .fade
+        return animationSettings.rowInsertAnimation
     }
 
     /**
      Returns the animation for the deletion of the given rows.
      */
     open func deleteAnimation(forRows rows: [FormalBaseRow]) -> UITableViewRowAnimation {
-        return .fade
+        return animationSettings.rowDeleteAnimation
     }
 
     /**
      Returns the animation for the reloading of the given rows.
      */
     open func reloadAnimation(oldRows: [FormalBaseRow], newRows: [FormalBaseRow]) -> UITableViewRowAnimation {
-        return .automatic
+        return animationSettings.rowReloadAnimation
     }
 
     /**
      Returns the animation for the insertion of the given sections.
      */
     open func insertAnimation(forSections sections: [FormalSection]) -> UITableViewRowAnimation {
-        return .automatic
+        return animationSettings.sectionInsertAnimation
     }
 
     /**
      Returns the animation for the deletion of the given sections.
      */
     open func deleteAnimation(forSections sections: [FormalSection]) -> UITableViewRowAnimation {
-        return .automatic
+        return animationSettings.sectionDeleteAnimation
     }
 
     /**
      Returns the animation for the reloading of the given sections.
      */
     open func reloadAnimation(oldSections: [FormalSection], newSections: [FormalSection]) -> UITableViewRowAnimation {
-        return .automatic
+        return animationSettings.sectionReloadAnimation
     }
 
     // MARK: TextField and TextView Delegate
