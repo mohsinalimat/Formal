@@ -424,7 +424,36 @@ open class FormalViewControllerTableAnimationDefaults {
      Returns the animation for the reloading of the given sections.
      */
     open var sectionReloadAnimation: UITableViewRowAnimation = .automatic
+    
+    public init() {}
+    
+    public init(row: UITableViewRowAnimation, section: UITableViewRowAnimation) {
+        rowInsertAnimation = row
+        rowDeleteAnimation = row
+        rowReloadAnimation = row
+        sectionInsertAnimation = section
+        sectionDeleteAnimation = section
+        sectionReloadAnimation = section
+    }
+    
+    public convenience init(animation: UITableViewRowAnimation) {
+        self.init(row: animation, section: animation)
+    }
+    
+    open class func none() -> FormalViewControllerTableAnimationDefaults {
+        return FormalViewControllerTableAnimationDefaults(animation: .none)
+    }
+    
+    open class func automatic() -> FormalViewControllerTableAnimationDefaults {
+        return FormalViewControllerTableAnimationDefaults(animation: .automatic)
+    }
+    
+    open class func fade() -> FormalViewControllerTableAnimationDefaults {
+        return FormalViewControllerTableAnimationDefaults(animation: .fade)
+    }
 }
+
+public typealias FormalTableAnimationDefaults = FormalViewControllerTableAnimationDefaults
 
 /// View controller that shows a formal.
 open class FormalViewController: UIViewController, FormalViewControllerProtocol, FormalDelegate {
